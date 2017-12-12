@@ -1,4 +1,4 @@
-package com.group4travels.controller;
+package com.group4travels.config;
 
 import javax.sql.DataSource;
 
