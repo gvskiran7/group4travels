@@ -2,6 +2,7 @@ package com.group4travels.config;
 
 import javax.sql.DataSource;
 
+import com.group4travels.dao.UserDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -37,7 +38,12 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/travels");
         dataSource.setUsername("root");
-        dataSource.setPassword("apple");
+        dataSource.setPassword("apple123");
         return dataSource;
+    }
+
+    @Bean
+    public UserDao getStudentDAO() {
+        return new UserDao(getDataSource());
     }
 }
