@@ -56,7 +56,7 @@ public class HomeController {
     public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response , @ModelAttribute("login") Login login) {
         ModelAndView modelAndView = new ModelAndView();
         final User user = userDao.get(login.getUsername());
-        if(user.getUsername().equals(login.getUsername()) && user.getPassword().equals("password")) {
+        if(user.getUsername().equals(login.getUsername()) && user.getPassword().equals(login.getPassword())) {
             modelAndView.setViewName ("index");
         } else {
             modelAndView.setViewName("logout");

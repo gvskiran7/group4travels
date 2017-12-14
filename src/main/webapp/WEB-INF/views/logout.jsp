@@ -1,15 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
-<h1> Username or password is incorect. </h1>
-<a href="/login">Login</a>
-</body>
-</html>
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 
 <html lang="en">
@@ -65,7 +54,7 @@
                 <div class="col-lg-12">
                     <h2>Login Error Page</h2>
 
-                    <h1> Username or password is incorect. </h1>
+                    <p> Username or password is incorect. </p>
                     <a href="/login">Login</a>
                 </div>
             </div>
