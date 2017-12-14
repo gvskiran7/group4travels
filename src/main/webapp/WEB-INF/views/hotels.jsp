@@ -1,5 +1,6 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!doctype html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -36,12 +37,12 @@
             <ul class="nav navbar-nav">
                 <li><a href="index">Buses <span class="sr-only">(current)</span> </a> </li>
                 <li><a href="cars">Cars</a> </li>
-                <li><a href="hotels">Hotels</a> </li>
+                <li class="active"><a href="hotels">Hotels</a> </li>
             </ul>
             <!-- signin right -->
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="login">Log In</a></li>
-                <li class="active"><a href="signup">Sign Up</a></li>
+                </li><li> <a href="signup">Sign Up</a></li>
                 <li><a href="contactus">Contact Us</a></li>
             </ul>
 
@@ -51,57 +52,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Sign Up</h2>
-                    <form:form id="regForm" modelAttribute="user" action="signup" method="post">
+                    <h2>Book a Hotel</h2>
+                    <form>
                         <div class="form-group">
-                            <form:label path="name" class="cols-sm-2 control-label">Your Name</form:label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <form:input  path="name" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
-                                </div>
-                            </div>
+                            <label for="Source">City</label>
+                            <input type="text" class="form-control" id="Source" aria-describedby="emailHelp" placeholder="Enter City">
+                            <small id="Source" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
-                            <form:label path="email" class="cols-sm-2 control-label">Your Email</form:label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input path="email" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
-                                </div>
-                            </div>
+                            <label for="exampleInputPassword1">Number of Persons</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter No of Persons going to stay">
                         </div>
                         <div class="form-group">
-                            <form:label path="username" class="cols-sm-2 control-label">Username</form:label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input path="username" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
-                                </div>
-                            </div>
+                            <label for="exampleInputEmail1">Check In</label>
+                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" Enter Check In Date">
                         </div>
                         <div class="form-group">
-                            <form:label path="password" class="cols-sm-2 control-label">Password</form:label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input path="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
-                                </div>
-                            </div>
+                            <label for="exampleInputPassword1">Check Out</label>
+                            <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Enter Check Out Date">
                         </div>
                         <div class="form-group">
-                            <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-                                </div>
-                            </div>
+                            <label for="exampleInputPassword1">No of Persons</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Number of Perons Travelling">
                         </div>
-                        <div class="form-group ">
-                            <form:button id="register" class="btn btn-primary " name="register">Register</form:button>
-                        </div>
-                    </form:form>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -134,5 +109,7 @@
     </div>
 </div>
 
+
+<script src="js/scripts.js"></script>
 </body>
 </html>

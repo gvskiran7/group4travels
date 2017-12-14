@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 
 <html lang="en">
@@ -34,15 +35,15 @@
             </div>
             <!-- Tabs-->
             <ul class="nav navbar-nav">
-                <li><a href="/index.html">Buses <span class="sr-only">(current)</span> </a> </li>
-                <li><a href="/cars.html">Cars</a> </li>
-                <li><a href="/hotels.html">Hotels</a> </li>
+                <li><a href="index">Buses <span class="sr-only">(current)</span> </a> </li>
+                <li><a href="cars">Cars</a> </li>
+                <li><a href="hotels">Hotels</a> </li>
             </ul>
             <!-- signin right -->
             <ul class="nav navbar-nav navbar-right">
-                 <li><a href="/signin.html">Log In</a></li>
-                <li><a href="/signup.html">Sign Up</a></li>
-                <li class="active"><a href="/contactus.html">Contact Us</a></li>
+                <li><a href="login">Log In</a></li>
+                <li><a href="signup">Sign Up</a></li>
+                <li class="active"><a href="contactus">Contact Us</a></li>
             </ul>
 
         </div>
@@ -53,45 +54,42 @@
                 <div class="col-lg-12">
                     <h2>Contact Us</h2>
 
-                        Group4travels.com<br/>
-                        Sullivan University<br/>
-                        Web Site Admin : vgunda7015@my.sullivan.edu<br/>
+                    Group4travels.com<br/>
+                    Sullivan University<br/>
+                    Web Site Admin : vgunda7015@my.sullivan.edu<br/>
                     <br/>
-                        All issues and queries can be sent to the above mentioned email.<br/>
+                    All issues and queries can be sent to the above mentioned email.<br/>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-	<div class="row">
+    <div class="row">
         <div class="col-md-3">
-		    <p>Advertisement 1</p>
+            <p>Advertisement 1</p>
             <a href="#" class="thumbnail">
-                <img src="images/img1.jpg" alt="...">
+                <img src="resources/images/img1.jpg" alt="...">
             </a>
         </div>
         <div class="col-md-3">
-			<p>Advertisement 2</p>
+            <p>Advertisement 2</p>
             <a href="#" class="thumbnail">
-                <img src="images/img2.jpg" alt="...">
+                <img src="resources/images/img2.jpg" alt="...">
             </a>
         </div>
         <div class="col-md-3">
-			<p>Advertisement 3</p>
+            <p>Advertisement 3</p>
             <a href="#" class="thumbnail">
-                <img src="images/img3.jpg" alt="...">
+                <img src="resources/images/img3.jpg" alt="...">
             </a>
         </div>
         <div class="col-md-3">
-			<p>Advertisement 4</p>
+            <p>Advertisement 4</p>
             <a href="#" class="thumbnail">
-                <img src="images/img2.jpg" alt="...">
+                <img src="resources/images/img4.jpg" alt="...">
             </a>
         </div>
     </div>
 </div>
-
-
-<script src="js/scripts.js"></script>
 </body>
 </html>

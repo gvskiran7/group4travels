@@ -20,14 +20,29 @@ public class HomeController {
     UserDao userDao;
 
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView home(HttpServletRequest request, HttpServletResponse response) {
+    public String home(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView modelAndView = new ModelAndView("home");
-        return modelAndView;
+        return "redirect:/index";
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/index")
     public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView modelAndView = new ModelAndView("index");
+        return modelAndView;
+    }
+    @RequestMapping(method = RequestMethod.GET, value = "/contactus")
+    public ModelAndView contactus(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView modelAndView = new ModelAndView("contactus");
+        return modelAndView;
+    }
+    @RequestMapping(method = RequestMethod.GET, value = "/cars")
+    public ModelAndView cars(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView modelAndView = new ModelAndView("cars");
+        return modelAndView;
+    }
+    @RequestMapping(method = RequestMethod.GET, value = "/hotels")
+    public ModelAndView hotels(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView modelAndView = new ModelAndView("hotels");
         return modelAndView;
     }
 
@@ -40,7 +55,8 @@ public class HomeController {
     @RequestMapping(method = RequestMethod.POST, value = "/login")
     public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response , @ModelAttribute("login") Login login) {
         ModelAndView modelAndView = new ModelAndView();
-        if(login.getUsername().equals("admin") && login.getPassword().equals("password")) {
+        final User user = userDao.get(login.getUsername());
+        if(user.getUsername().equals(login.getUsername()) && user.getPassword().equals("password")) {
             modelAndView.setViewName ("index");
         } else {
             modelAndView.setViewName("logout");
